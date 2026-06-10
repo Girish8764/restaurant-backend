@@ -21,7 +21,7 @@ stages {
 
         steps {
 
-            git branch: 'main',
+            git branch: 'master',
                 url: 'https://github.com/Girish8764/restaurant-backend.git'
 
         }
