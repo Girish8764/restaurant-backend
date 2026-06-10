@@ -3,9 +3,17 @@ pipeline {
 ```
 agent any
 
+options {
+    buildDiscarder(
+        logRotator(
+            numToKeepStr: '20'
+        )
+    )
+}
+
 environment {
     IMAGE_NAME = "girish8764/omega-restaurant-backend"
-    APP_SERVER = "65.0.199.3"
+    APP_SERVER = "3.108.58.75"
 }
 
 stages {
@@ -102,6 +110,21 @@ stages {
 
         }
 
+    }
+
+}
+
+post {
+
+    always {
+
+        sh '''
+        docker rmi $IMAGE_NAME:${BUILD_NUMBER} || true
+        docker rmi $IMAGE_NAME:latest || true
+        docker image prune -f
+        '''
+
+        cleanWs()
     }
 
 }
