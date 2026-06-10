@@ -45,7 +45,7 @@ app.use("/api/foods", foodRoutes);
 
 app.get("/health", (req, res) => {
   res.status(200).json({
-    status: "WORKING",
+    status: "WORKING_NOW",
     service: "restaurant-backend"
   });
 });
