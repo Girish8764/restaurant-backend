@@ -1,6 +1,5 @@
 pipeline {
 
-```
 agent any
 
 options {
@@ -128,7 +127,6 @@ post {
     }
 
 }
-```
 
 }
 
