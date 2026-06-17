@@ -45,7 +45,7 @@ app.use("/api/foods", foodRoutes);
 
 app.get("/health", (req, res) => {
   res.status(200).json({
-    status: "WORKING_NOW_FINEsssss",
+    status: "WORKING_NOW_FINE_with_trivy",
     service: "restaurant-backend"
   });
 });
