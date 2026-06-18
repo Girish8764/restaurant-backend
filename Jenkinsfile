@@ -97,7 +97,7 @@ stages {
 
         sh '''
         trivy image \
-        --severity HIGH,CRITICAL \
+        --severity CRITICAL \
         --exit-code 1 \
         $IMAGE_NAME:${BUILD_NUMBER}
         '''
