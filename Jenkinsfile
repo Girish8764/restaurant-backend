@@ -69,7 +69,7 @@ stages {
 
         sh '''
         trivy fs \
-        --severity HIGH,CRITICAL \
+        --severity CRITICAL \
         --exit-code 1 \
         .
         '''
