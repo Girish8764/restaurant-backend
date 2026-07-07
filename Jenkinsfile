@@ -12,7 +12,7 @@ options {
 
 environment {
     IMAGE_NAME = "girish8764/omega-restaurant-backend"
-    APP_SERVER = "3.111.217.20"
+    APP_SERVER = "65.2.171.141"
 }
 
 stages {
