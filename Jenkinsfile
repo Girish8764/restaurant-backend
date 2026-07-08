@@ -161,7 +161,7 @@ stages {
 
         steps {
 
-            sshagent(['ec2-ssh-key']) {
+            sshagent(['ssh']) {
 
                 sh '''
                 ssh -o StrictHostKeyChecking=no ubuntu@$APP_SERVER "
